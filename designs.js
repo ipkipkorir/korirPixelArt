@@ -17,7 +17,7 @@ var color;
 
 function makeGrid(n, m) 
 { 
-  $('#pixelCanvas').remove();
+  $('#pixelCanvas tr').remove();
   while(n > 0)
   {
       $('#pixelCanvas').append('<tr></tr>');
