@@ -7,6 +7,7 @@ var color;
   //Choosing size
  $('#sizePicker').submit(function (event) {
     event.preventDefault();
+    $('#pixelCanvas').remove();
     height = $('#inputHeight').val();
     width = $('#inputWeight').val();  
     makeGrid(height, width);
@@ -16,7 +17,6 @@ var color;
 
 function makeGrid(n, m) 
 { 
-  $('#pixelCanvas').remove();
   while(n > 0)
   {
       $('#pixelCanvas').append('<tr></tr>');
