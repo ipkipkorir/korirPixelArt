@@ -4,14 +4,6 @@ var height;
 var width;
 var color;
  
-$('#sizePicker').submit(function (event) {
-    event.preventDefault();
-    height = $('#inputHeight').val();
-    width = $('#inputWeight').val();  
-    makeGrid(height, width);
-});
-
-
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid(n, m) 
@@ -25,6 +17,13 @@ function makeGrid(n, m)
       }
    n--;
   }
+ //Choosing size
+ $('#sizePicker').submit(function (event) {
+    event.preventDefault();
+    height = $('#inputHeight').val();
+    width = $('#inputWeight').val();  
+    makeGrid(height, width);
+});
  
  //Adding color to cells
 $('td').click(function addColor() {
